@@ -1,8 +1,12 @@
 // Assignment Code
+
+// this is setting a variable based off of the item specified in the querySelector. (#generate ID'd button in the HTML)
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
+// this portion of the code still needs a function named generatePassword 
+// with a return value that will be passed on to passwordText
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
@@ -11,15 +15,13 @@ function writePassword() {
 }
 
 // Add event listener to generate button
+// this code is saying "when generateBtn is clicked, execute function writePassword"
 generateBtn.addEventListener("click", writePassword);
 
 
 
 // Need clickable button that will present password criteria prompt
-// 1)Use button that's already present
-
-
-//2) Need way to present a prompt as a result of clicking the "set password criteria" button
+// This will populate a prompt 
  function setCriteriaPrompt() {
   var criteriaAlert = prompt("please select desired criteria");
   alert ("please select desired creteria");
@@ -28,21 +30,40 @@ generateBtn.addEventListener("click", writePassword);
 
 // Need selectable list of criteria to include in pw
 // 1)need to create global variables for each list type
+// a)prompt for lowercase alph
+function lowerCasePrompt() {
+  prompt("would you like to include lower case letters?")
+}
+// b)prompt for uppercase alph
+function upperCasePrompt() {
+  prompt("would you like to include upper case letters?")
+}
+// c)prompt for numeric
+function numericPrompt() {
+  prompt("would you like to include numbers?")
+}
+// d)prompt for symbols/random chars
+function symbolsPrompt() {
+  prompt("would you like to include symbols? (I.G $,#,@)")
+}
+
+
+
+
+
+
+
+// 2) need a way to present list list of creteria (preferrable in toggle format)
+// Will have to use multiple prompts
 // a)for lowercase alph
 var lowerCase = "";
-// b)for uppercase alph
+// b)uppercase alph
 var upperCase = "";
 // c)for numeric
 var numeric = 0 ;
 // d)for symbols/random chars
 var symbols = "";
 
-
-
-
-
-
-// 2) need a way to present this list list of creteria (preferrable in toggle format)
 
 
 

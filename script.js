@@ -24,8 +24,10 @@ generateBtn.addEventListener("click", writePassword);
 // This will populate a prompt 
  function setCriteriaPrompt() {
   var criteriaAlert = prompt("please select desired criteria");
-  alert ("please select desired creteria");
+  alert ("thank you");
+  console.log(criteriaAlert)
  }
+
 
 
 // Need selectable list of criteria to include in pw
@@ -87,9 +89,9 @@ var numericToggle = true
 var symbolToggle = true
 
 // general idea of toggle formula that will effect the above toggle variable grouop
-if (userToggle = off) {
-  var upperCaseToggle = false;
-}
+// if (userToggle = off) {
+//   var upperCaseToggle = false;
+// }
 
 
 

@@ -37,4 +37,12 @@ generateBtn.addEventListener("click", writePassword);
 
 
 
-// When each prompt has been answered, input should be validated
+// When I answer each prompt, input should be validated
+
+
+
+//After every prompts are answered, pw is generated that matches selected criteria
+
+
+
+//When this pw is written, its either displayed in the alert or written to the page

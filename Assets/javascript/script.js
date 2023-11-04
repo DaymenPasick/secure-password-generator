@@ -78,6 +78,10 @@ if (generatorCommence = false) {
 //After every prompt is answered, pw is generated that matches selected criteria
 // 1) loop that takes in all of the previous functions or whatever type of code that handled criteria input-
 // and uses it to generate a random pw based off input
+ if (generatorCommence = true) {
+  // code that runs through the creteria and populates an appropriate return response based on the data
+ }
+//  based off this return, we need code that will run an algorithm to generate a password accordingly
 
 
 

@@ -20,7 +20,10 @@ generateBtn.addEventListener("click", writePassword);
 
 
 //2) Need way to present a prompt as a result of clicking the "set password criteria" button
-
+ function setCriteriaPrompt() {
+  var criteriaAlert = prompt("please select desired criteria");
+  alert ("please select desired creteria");
+ }
 
 
 // Need selectable list of criteria to include in pw
@@ -56,6 +59,7 @@ var symbols = "";
 // algorithm that will be used to populate the random password
 
 // Boolean Toggle Group that will change based off user input. Toggle on = True, Toggle off = false
+// Toggles will initially all start as being true, or "on"
 var lowerCaseToggle = true
 var upperCaseToggle = true
 var numericToggle = true

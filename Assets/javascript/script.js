@@ -55,6 +55,17 @@ var symbols = "";
 // 1) need a way to take in the user's inputted creteria prefferences, and apply these settings to the-
 // algorithm that will be used to populate the random password
 
+// Boolean Toggle Group that will change based off user input. Toggle on = True, Toggle off = false
+var lowerCaseToggle = true
+var upperCaseToggle = true
+var numericToggle = true
+var symbolToggle = true
+
+// general idea of toggle formula that will effect the above toggle variable grouop
+if (userToggle = off) {
+  var upperCaseToggle = false;
+}
+
 
 
 // Minimum of one character type needs to be selected

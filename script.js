@@ -20,35 +20,15 @@
 
 
 
-// Need clickable button that will present password criteria prompt --------------------------------------------------------------------------
-// This will populate a generic prompt and record answer in console log for testing
- function userCriteriaPrompt() {
-  var inputCriteria = prompt("please select desired criteria");
-  alert ("thank you");
-  if (inputCriteria === 'y' || inputCriteria === 'Y' || inputCriteria === 'n' || inputCriteria === 'N') {
-    console.log ("woop woop");
-  } else {
-    console.log("please try again")
-  }
-}
-// need to make this a loop that will run through all of the criteria prompts and record user-response  
-
-console.log("log tester");
 
 
 // Need selectable list of criteria to include in pw --------------------------------------------------------------------------
 // 1)Global variables for each list type
-
-// a)for lowercase alph
 var lowerCase = "";
-// b)uppercase alph
 var upperCase = "";
-// c)for numeric
 var numeric = 0 ;
-// d)for symbols/random chars
 var symbols = "";
 
-// 2) need a way to present list list of creteria (preferrable in toggle format)
 //Functions for each criteria option prompt
 function lowerCasePrompt() {
     prompt("would you like to include lower case letters?")
@@ -65,6 +45,28 @@ function lowerCasePrompt() {
   function symbolsPrompt() {
     prompt("would you like to include symbols? (I.G $,#,@)")
   }
+
+
+
+
+// Need clickable button that will present password criteria prompt --------------------------------------------------------------------------
+// This will populate a generic prompt and record answer in console log for testing
+ function userCriteriaPrompt() {
+  var inputCriteria = prompt("please select desired criteria");
+  alert ("thank you");
+  if (inputCriteria === 'y' || inputCriteria === 'Y' || inputCriteria === 'n' || inputCriteria === 'N') {
+    console.log ("woop woop");
+  } else {
+    console.log("please try again")
+  }
+}
+// need to make this a loop that will run through all of the criteria prompts and record user-response  
+
+console.log("log tester");
+
+
+
+
 
 
 

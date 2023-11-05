@@ -40,7 +40,7 @@ var symbolInput
 
 //Start of functionality prompting user input for lower-case letters -------------------------------------------------------
 
-// Initial prompt
+// Initial prompt for lower-case letters
 function lowerCasePrompt() {
     
      lowerCaseInput = prompt("would you like to include lower case letters?")
@@ -55,25 +55,89 @@ function lowerCasePrompt() {
       }
   }
 
-//   will set lowerCaseBoolean to true/false depending on user-input
+//will set lowerCaseBoolean to true/false depending on user-input
   function lowerCaseToggle () {
     if (lowerCaseInput === 'y' || lowerCaseInput === 'Y' ) {
         lowerCaseBoolean = true;
         console.log(lowerCaseBoolean);
+        upperCasePrompt(); //Will chain and trigger from lower-case toggle to the upper-case toggle
     } else {
         lowerCaseBoolean = false;
         console.log(lowerCaseBoolean);
     }
-
-    }
-
+  }
 //End of functionality prompting user input for lower-case letters -------------------------------------------------------
 
-  
-  function upperCasePrompt() {
-    prompt("would you like to include upper case letters?")
-  }
-  
+
+
+
+//Start of functionality prompting user input for upper-case letters -------------------------------------------------------
+
+// Initial prompt for upper-case letters
+function upperCasePrompt() {
+    
+    upperCaseInput = prompt("would you like to include upper case letters?")
+   if (upperCaseInput === 'y' || upperCaseInput === 'Y' || upperCaseInput === 'n' || upperCaseInput === 'N') {
+       console.log (upperCaseInput);
+       upperCaseToggle();
+     } else {
+       // should prompt user to use correct characters and allow them to retry
+       console.log("please try again");
+       alert("Must use one of the following: 'y' - 'Y' - 'n' - 'N'. Please try again.");
+       upperCasePrompt(); 
+     }
+ }
+
+//will set lowerCaseBoolean to true/false depending on user-input
+ function upperCaseToggle () {
+   if (upperCaseInput === 'y' || upperCaseInput === 'Y' ) {
+       upperCaseBoolean = true;
+       console.log(upperCaseBoolean);
+       numericPrompt();
+   } else {
+       upperCaseBoolean = false;
+       console.log(upperCaseBoolean);
+   }
+
+   }
+
+//End of functionality prompting user input for upper-case letters -------------------------------------------------------
+
+
+
+//Start of functionality prompting user input for number inclusivity -------------------------------------------------------
+
+// Initial prompt for number inclusivity
+function numericPrompt() {
+    
+    numericInput = prompt("would you like to include numbers?")
+   if (numericInput === 'y' || numericInput === 'Y' || numericInput === 'n' || numericInput === 'N') {
+       console.log (numericInput);
+       numericToggle();
+     } else {
+       // should prompt user to use correct characters and allow them to retry
+       console.log("please try again");
+       alert("Must use one of the following: 'y' - 'Y' - 'n' - 'N'. Please try again.");
+       numericPrompt(); 
+     }
+ }
+
+//will set numberBoolean to true/false depending on user-input
+ function numericToggle () {
+   if (numericInput === 'y' || upperCaseInput === 'Y' ) {
+       numericBoolean = true;
+       console.log(numericBoolean);
+   } else {
+       numericBoolean = false;
+       console.log(numericBoolean);
+   }
+
+   }
+
+//End of functionality prompting user input for number inclusivity -------------------------------------------------------
+ 
+ 
+
   function numericPrompt() {
     prompt("would you like to include numbers?")
   }

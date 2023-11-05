@@ -20,30 +20,50 @@
 
 
 //Global variables for each criteria type
-var lowerCase = "";
-var upperCase = "";
-var numeric = 0 ;
-var symbols = "";
+var lowerCase = ""
+var upperCase = ""
+var numeric = 0 
+var symbols = ""
 
-// Boolean Toggle Group that will change based off user input. Toggle on = True, Toggle off = false
-// Toggles will initially all start as being true, or "on"
-var lowerCaseToggle = true
-var upperCaseToggle = true
-var numericToggle = true
-var symbolToggle = true
+// Boolean Toggle Group that will change based off user input
+// Criteria will initially all start as being true (meaning user wants to include them in their password)
+var lowerCaseBoolean = true
+var upperCaseBoolean = true
+var numericBoolean = true
+var symbolBoolean = true
+
+//Global variable to store user-input for each criteria option
+var lowerCaseInput
+var upperCaseInput
+var numericInput
+var symbolInput
 
 //Functions for each criteria option prompt
 function lowerCasePrompt() {
     
-    var lowerCaseInput = prompt("would you like to include lower case letters?")
+     lowerCaseInput = prompt("would you like to include lower case letters?")
     if (lowerCaseInput === 'y' || lowerCaseInput === 'Y' || lowerCaseInput === 'n' || lowerCaseInput === 'N') {
         console.log (lowerCaseInput);
-        //need function that will take input and use it to toggle criteria booleans accordingly
+        lowerCaseToggle();
       } else {
         console.log("please try again")
         //need code to return to prompt
       }
   }
+
+//   will set lowerCaseBoolean to true/false depending on user-input
+  function lowerCaseToggle () {
+    if (lowerCaseInput === 'y' || lowerCaseInput === 'y' ) {
+        lowerCaseBoolean = true;
+        console.log(lowerCaseBoolean)
+    } else {
+        lowerCaseBoolean = false;
+        console.log(lowerCaseBoolean)
+    }
+
+    }
+
+
   
   function upperCasePrompt() {
     prompt("would you like to include upper case letters?")

@@ -60,7 +60,7 @@ function lowerCasePrompt() {
     if (lowerCaseInput === 'y' || lowerCaseInput === 'Y' ) {
         lowerCaseBoolean = true;
         console.log(lowerCaseBoolean);
-        upperCasePrompt(); //Will chain and trigger from lower-case toggle to the upper-case toggle
+        upperCasePrompt(); //Will chain into upper-case letter prompt
     } else {
         lowerCaseBoolean = false;
         console.log(lowerCaseBoolean);
@@ -93,7 +93,7 @@ function upperCasePrompt() {
    if (upperCaseInput === 'y' || upperCaseInput === 'Y' ) {
        upperCaseBoolean = true;
        console.log(upperCaseBoolean);
-       numericPrompt();
+       numericPrompt(); //will chain into numeric input prompt
    } else {
        upperCaseBoolean = false;
        console.log(upperCaseBoolean);
@@ -124,9 +124,10 @@ function numericPrompt() {
 
 //will set numberBoolean to true/false depending on user-input
  function numericToggle () {
-   if (numericInput === 'y' || upperCaseInput === 'Y' ) {
+   if (numericInput === 'y' || numericInput === 'Y' ) {
        numericBoolean = true;
        console.log(numericBoolean);
+       symbolPrompt(); //will chain into symbol input prompt
    } else {
        numericBoolean = false;
        console.log(numericBoolean);
@@ -136,17 +137,39 @@ function numericPrompt() {
 
 //End of functionality prompting user input for number inclusivity -------------------------------------------------------
  
+
+
+//Start of functionality prompting user input for symbol inclusivity -------------------------------------------------------
+
+// Initial prompt for symbol inclusivity
+function symbolPrompt() {
+    
+    symbolInput = prompt("would you like to include numbers?")
+   if (symbolInput === 'y' || symbolInput === 'Y' || symbolInput === 'n' || symbolInput === 'N') {
+       console.log (symbolInput);
+       symbolToggle();
+     } else {
+       // should prompt user to use correct characters and allow them to retry
+       console.log("please try again");
+       alert("Must use one of the following: 'y' - 'Y' - 'n' - 'N'. Please try again.");
+       symbolPrompt(); 
+     }
+ }
+
+//will set numberBoolean to true/false depending on user-input
+ function symbolToggle () {
+   if (symbolInput === 'y' || symbolInput === 'Y' ) {
+       symbolBoolean = true;
+       console.log(numericBoolean);
+   } else {
+       symbolBoolean = false;
+       console.log(symbolBoolean);
+   }
+
+   }
+
+//End of functionality prompting user input for symbol inclusivity -------------------------------------------------------
  
-
-  function numericPrompt() {
-    prompt("would you like to include numbers?")
-  }
-  
-  function symbolsPrompt() {
-    prompt("would you like to include symbols? (I.G $,#,@)")
-  }
-
-
 
 
 // Need clickable button that will present password criteria prompt --------------------------------------------------------------------------

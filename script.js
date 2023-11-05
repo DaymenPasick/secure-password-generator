@@ -4,28 +4,30 @@
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-function writePassword() {
+// function writePassword() {
 // this portion of the code still needs a function named generatePassword 
 // with a return value that will be passed on to passwordText
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+//   var password = generatePassword();
+//   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+//   passwordText.value = password;
 
-}
+// }
 
 // Add event listener to generate button
 // this code is saying "when generateBtn is clicked, execute function writePassword"
-generateBtn.addEventListener("click", writePassword);
+// generateBtn.addEventListener("click", writePassword);
 
 
 
 // Need clickable button that will present password criteria prompt
-// This will populate a prompt 
+
+// This will populate a generic prompt and record answer in console log for testing
  function setCriteriaPrompt() {
   var criteriaAlert = prompt("please select desired criteria");
   alert ("thank you");
   console.log(criteriaAlert)
+// need to make this a loop that will run through all of the criteria prompts and record user-response  
  }
 
 
@@ -109,7 +111,7 @@ if (generatorCommence = false) {
 }
 
 
-// When I answer each prompt, input should be validated
+// When I answer each prompt, input should be validated "please enter correct......"
 
 
 

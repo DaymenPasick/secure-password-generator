@@ -38,7 +38,9 @@ var upperCaseInput
 var numericInput
 var symbolInput
 
-//Functions for each criteria option prompt
+//Start of functionality prompting user input for lower-case letters -------------------------------------------------------
+
+// Initial prompt
 function lowerCasePrompt() {
     
      lowerCaseInput = prompt("would you like to include lower case letters?")
@@ -46,23 +48,26 @@ function lowerCasePrompt() {
         console.log (lowerCaseInput);
         lowerCaseToggle();
       } else {
-        console.log("please try again")
-        //need code to return to prompt
+        // should prompt user to use correct characters and allow them to retry
+        console.log("please try again");
+        alert("Must use one of the following: 'y' - 'Y' - 'n' - 'N'. Please try again.");
+        lowerCasePrompt(); 
       }
   }
 
 //   will set lowerCaseBoolean to true/false depending on user-input
   function lowerCaseToggle () {
-    if (lowerCaseInput === 'y' || lowerCaseInput === 'y' ) {
+    if (lowerCaseInput === 'y' || lowerCaseInput === 'Y' ) {
         lowerCaseBoolean = true;
-        console.log(lowerCaseBoolean)
+        console.log(lowerCaseBoolean);
     } else {
         lowerCaseBoolean = false;
-        console.log(lowerCaseBoolean)
+        console.log(lowerCaseBoolean);
     }
 
     }
 
+//End of functionality prompting user input for lower-case letters -------------------------------------------------------
 
   
   function upperCasePrompt() {

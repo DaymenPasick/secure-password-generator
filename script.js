@@ -34,9 +34,10 @@ var symbolToggle = true
 
 //Functions for each criteria option prompt
 function lowerCasePrompt() {
-    prompt("would you like to include lower case letters?")
-    if (lowerCasePrompt === 'y' || inputCriteria === 'Y' || inputCriteria === 'n' || inputCriteria === 'N') {
-        console.log (lowerCasePrompt);
+    
+    var lowerCaseInput = prompt("would you like to include lower case letters?")
+    if (lowerCaseInput === 'y' || lowerCaseInput === 'Y' || lowerCaseInput === 'n' || lowerCaseInput === 'N') {
+        console.log (lowerCaseInput);
         //need function that will take input and use it to toggle criteria booleans accordingly
       } else {
         console.log("please try again")
@@ -61,15 +62,15 @@ function lowerCasePrompt() {
 
 // Need clickable button that will present password criteria prompt --------------------------------------------------------------------------
 // This will populate a generic prompt and record answer in console log for testing
- function userCriteriaPrompt() {
-  var inputCriteria = prompt("please select desired criteria");
-  alert ("thank you");
-  if (inputCriteria === 'y' || inputCriteria === 'Y' || inputCriteria === 'n' || inputCriteria === 'N') {
-    console.log ("woop woop");
-  } else {
-    console.log("please try again")
-  }
-}
+//  function userCriteriaPrompt() {
+//   var inputCriteria = prompt("please select desired criteria");
+//   alert ("thank you");
+//   if (inputCriteria === 'y' || inputCriteria === 'Y' || inputCriteria === 'n' || inputCriteria === 'N') {
+//     console.log ("woop woop");
+//   } else {
+//     console.log("please try again")
+//   }
+// }
 // need to make this a loop that will run through all of the criteria prompts and record user-response  
 
 console.log("log tester");

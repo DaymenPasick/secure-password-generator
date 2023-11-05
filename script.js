@@ -19,19 +19,29 @@
 // generateBtn.addEventListener("click", writePassword);
 
 
-
-
-
-// Need selectable list of criteria to include in pw --------------------------------------------------------------------------
-// 1)Global variables for each list type
+//Global variables for each criteria type
 var lowerCase = "";
 var upperCase = "";
 var numeric = 0 ;
 var symbols = "";
 
+// Boolean Toggle Group that will change based off user input. Toggle on = True, Toggle off = false
+// Toggles will initially all start as being true, or "on"
+var lowerCaseToggle = true
+var upperCaseToggle = true
+var numericToggle = true
+var symbolToggle = true
+
 //Functions for each criteria option prompt
 function lowerCasePrompt() {
     prompt("would you like to include lower case letters?")
+    if (lowerCasePrompt === 'y' || inputCriteria === 'Y' || inputCriteria === 'n' || inputCriteria === 'N') {
+        console.log (lowerCasePrompt);
+        //need function that will take input and use it to toggle criteria booleans accordingly
+      } else {
+        console.log("please try again")
+        //need code to return to prompt
+      }
   }
   
   function upperCasePrompt() {
@@ -79,12 +89,7 @@ console.log("log tester");
 // 1) need a way to take in the user's inputted creteria prefferences, and apply these settings to the-
 // algorithm that will be used to populate the random password
 
-// Boolean Toggle Group that will change based off user input. Toggle on = True, Toggle off = false
-// Toggles will initially all start as being true, or "on"
-var lowerCaseToggle = true
-var upperCaseToggle = true
-var numericToggle = true
-var symbolToggle = true
+
 
 // general idea of toggle formula that will effect the above toggle variable grouop
 // if (userToggle = off) {

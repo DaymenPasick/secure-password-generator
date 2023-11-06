@@ -64,6 +64,7 @@ function lowerCasePrompt() {
     } else {
         lowerCaseBoolean = false;
         console.log(lowerCaseBoolean);
+        upperCasePrompt(); //Will chain into upper-case letter prompt
     }
   }
 //End of functionality prompting user input for lower-case letters -------------------------------------------------------
@@ -97,6 +98,7 @@ function upperCasePrompt() {
    } else {
        upperCaseBoolean = false;
        console.log(upperCaseBoolean);
+       numericPrompt(); //will chain into numeric input prompt
    }
 
    }
@@ -131,6 +133,7 @@ function numericPrompt() {
    } else {
        numericBoolean = false;
        console.log(numericBoolean);
+       symbolPrompt(); //will chain into symbol input prompt
    }
 
    }
@@ -164,6 +167,8 @@ function symbolPrompt() {
    } else {
        symbolBoolean = false;
        console.log(symbolBoolean);
+      //  this should pass code to check selected credentials/verify at least one credential has been selected
+      //  lowerCasePrompt();
    }
 
    }
@@ -178,10 +183,14 @@ var generatorCommence = false
 
 function criteriaChecker () {
 if (lowerCaseBoolean || upperCaseBoolean || numericBoolean || symbolBoolean ) {
-  generatorCommence = true; 
+  generatorCommence = true;
+} else {
+  generatorCommence = false;
+  alert("Must have at least one criteria, please try again");
+
  }
 }
-// 2) a prompt message saying they must select at least one type of character before generation can start
+
 if (generatorCommence = false) {
   // this console.log should be replaced with an actual prompt screen message
   console.log("at least one criteria must be selected");

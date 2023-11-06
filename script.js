@@ -2,14 +2,6 @@
 // this is setting a variable based off of the item specified in the querySelector. (#generate ID'd button in the HTML)
 var generateBtn = document.querySelector("#generate");
 
-// this portion of code writes out the password using the passWordGenerator()
-function writePassword() {
-  var password = passwordGenerator();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
 
 // Add event listener to generate button
 // this code is saying "when generateBtn is clicked, execute function writePassword"
@@ -29,6 +21,8 @@ var upperCaseInput
 var numericInput
 var symbolInput
 
+
+
 //Start of functionality prompting user input for lower-case letters -------------------------------------------------------
 
 // Initial prompt for lower-case letters
@@ -46,7 +40,7 @@ function lowerCasePrompt() {
       }
   }
 
-//will set lowerCaseBoolean to true/false depending on user-input
+//will set lowerCaseBoolean to true/false depending on user response to lowerCasePrompt
   function lowerCaseToggle () {
     if (lowerCaseInput === 'y' || lowerCaseInput === 'Y' ) {
         lowerCaseBoolean = true;
@@ -80,7 +74,7 @@ function upperCasePrompt() {
      }
  }
 
-//will set lowerCaseBoolean to true/false depending on user-input
+//will set lowerCaseBoolean to true/false depending on response to upperCasePrompt
  function upperCaseToggle () {
    if (upperCaseInput === 'y' || upperCaseInput === 'Y' ) {
        upperCaseBoolean = true;
@@ -95,6 +89,7 @@ function upperCasePrompt() {
    }
 
 //End of functionality prompting user input for upper-case letters -------------------------------------------------------
+
 
 
 
@@ -115,7 +110,7 @@ function numericPrompt() {
      }
  }
 
-//will set numberBoolean to true/false depending on user-input
+//will set numberBoolean to true/false depending on response to numberPrompt
  function numericToggle () {
    if (numericInput === 'y' || numericInput === 'Y' ) {
        numericBoolean = true;
@@ -131,6 +126,7 @@ function numericPrompt() {
 
 //End of functionality prompting user input for number inclusivity -------------------------------------------------------
  
+
 
 
 //Start of functionality prompting user input for symbol inclusivity -------------------------------------------------------
@@ -150,7 +146,7 @@ function symbolPrompt() {
      }
  }
 
-//will set numberBoolean to true/false depending on user-input
+//will set numberBoolean to true/false depending on response to symbol prompt
  function symbolToggle () {
    if (symbolInput === 'y' || symbolInput === 'Y' ) {
        symbolBoolean = true;
@@ -167,12 +163,10 @@ function symbolPrompt() {
 
 //End of functionality prompting user input for symbol inclusivity -------------------------------------------------------
 
-console.log("log tester");
- 
+
+
 // Function that will check to see if at least one criteria was selected (at least one boolean is true)
 // If not, it should pass the user back to initial criteria prompt
-// var generatorCommence = false (may not need this part of the code)
-
 function criteriaChecker () {
 if (lowerCaseBoolean || upperCaseBoolean || numericBoolean || symbolBoolean ) {
   // generatorCommence = true;
@@ -223,4 +217,13 @@ function passwordGenerator () {
        pass += (lowerCase+upperCase+symbol+number).charAt(char);
     }
     return pass; //returns the generated password value back to "pass" variable
+}
+
+// this portion of code writes out the password using the passWordGenerator() ---------------------------
+function writePassword() {
+  var password = passwordGenerator();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+
 }

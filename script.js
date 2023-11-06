@@ -141,7 +141,7 @@ function numericPrompt() {
 // Initial prompt for symbol inclusivity
 function symbolPrompt() {
     
-    symbolInput = prompt("would you like to include numbers?")
+    symbolInput = prompt("would you like to include symbols?")
    if (symbolInput === 'y' || symbolInput === 'Y' || symbolInput === 'n' || symbolInput === 'N') {
        console.log (symbolInput);
        symbolToggle();
@@ -213,10 +213,10 @@ function passwordGenerator () {
   if (!upperCaseBoolean) {
     upperCase = null;
   }
-  if (!symbol) {
+  if (!symbolBoolean) {
     symbol = null;
   }
-  if (!number) {
+  if (!numericBoolean) {
     number = null;
   }
 

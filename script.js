@@ -164,6 +164,7 @@ function symbolPrompt() {
    if (symbolInput === 'y' || symbolInput === 'Y' ) {
        symbolBoolean = true;
        console.log(numericBoolean);
+       criteriaChecker ()
    } else {
        symbolBoolean = false;
        console.log(symbolBoolean);
@@ -179,14 +180,14 @@ console.log("log tester");
  
 // Function that will check to see if at least one criteria was selected (at least one boolean is true)
 // If not, it should pass the user back to initial criteria prompt
-var generatorCommence = false
+// var generatorCommence = false (may not need this part of the code)
 
 function criteriaChecker () {
 if (lowerCaseBoolean || upperCaseBoolean || numericBoolean || symbolBoolean ) {
-  generatorCommence = true;
+  // generatorCommence = true;
   readCriteriaBooleans(); //passes to portion of code that will take in true/false criteria based off user-prompt input
 } else {
-  generatorCommence = false;
+  // generatorCommence = false;
   alert("Must have at least one criteria, please try again");
   // this will send user back to criteria prompt if they didn't select at least one criteria
   lowerCasePrompt()
@@ -196,13 +197,13 @@ if (lowerCaseBoolean || upperCaseBoolean || numericBoolean || symbolBoolean ) {
 
 // This function should take in the criteria booleans that we set based off the user's response
 // and pass the results onto the actual password generator
-
 function readCriteriaBooleans() {
-  if (generatorCommence) {
-    // code to read Boolean responses
-  }
+  alert("well done!");
+  // function that will take alter password criteria based off criteria booleans
 }
 
+
+// 1st need to be able to generate a password in general
 
 
 

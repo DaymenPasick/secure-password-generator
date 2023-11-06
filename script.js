@@ -170,21 +170,6 @@ function symbolPrompt() {
 
 //End of functionality prompting user input for symbol inclusivity -------------------------------------------------------
  
-
-
-// Need clickable button that will present password criteria prompt --------------------------------------------------------------------------
-// This will populate a generic prompt and record answer in console log for testing
-//  function userCriteriaPrompt() {
-//   var inputCriteria = prompt("please select desired criteria");
-//   alert ("thank you");
-//   if (inputCriteria === 'y' || inputCriteria === 'Y' || inputCriteria === 'n' || inputCriteria === 'N') {
-//     console.log ("woop woop");
-//   } else {
-//     console.log("please try again")
-//   }
-// }
-// need to make this a loop that will run through all of the criteria prompts and record user-response  
-
 console.log("log tester");
 
 

@@ -207,7 +207,7 @@ function passwordGenerator () {
   let number = '123456789';
 
     // this part should generate the numeric portion of the passwords
-    for (let i = 1; i <= 8; i++) {
+    for (let i = 8; i <= 128 && i >= 8; i++) { //this line will allow password to be ranging from 8 ~ 128
        let char = Math.floor(Math.random()*(lowerCase+upperCase+symbol+number).length + 1);
         //The above and below code will combine our internal variables to create characters for the generator to choose
        pass += (lowerCase+upperCase+symbol+number).charAt(char);

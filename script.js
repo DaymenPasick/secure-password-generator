@@ -201,9 +201,9 @@ function readCriteriaBooleans() {
 // 1st need to be able to generate a password in general
 function passwordGenerator () {
   let pass = '';
-  let upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  let lowerCase = 'abcdefhijklmnopqrstuvwxyz';
-  let symbol = '*&%$#@!?.'
+  let upperCase = null
+  let lowerCase = null
+  let symbol = null
   let number = '123456789';
 
     // this part should generate the numeric portion of the passwords

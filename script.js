@@ -192,7 +192,8 @@ if (lowerCaseBoolean || upperCaseBoolean || numericBoolean || symbolBoolean ) {
 // This function should take in the criteria booleans that we set based off the user's response
 // and pass the results onto the actual password generator
 function readCriteriaBooleans() {
-  alert("well done!");
+  passwordGenerator();
+  alert("New Secure Password: " + passwordGenerator());
   // function that will take alter password criteria based off criteria booleans
 }
 

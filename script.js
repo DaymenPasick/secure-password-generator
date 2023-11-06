@@ -202,7 +202,7 @@ function readCriteriaBooleans() {
 function passwordGenerator () {
   let pass = '';
   let upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  let lowerCase = upperCase.toLowerCase(); //will convert upperCase to lower-case letters
+  let lowerCase = 'abcdefhijklmnopqrstuvwxyz';
   let symbol = '*&%$#@!?.'
   let number = '123456789';
 
@@ -218,24 +218,10 @@ function passwordGenerator () {
 passwordGenerator(); //temporary test to see if generator is functioning
 console.log(passwordGenerator());
 
-//Pw length can only be 8 ~ 128 chars --------------------------------------------------------------------------
-// 1) need a way to control the min/max length of characters generated when user generated the password
-
 // Toggle to confirm which types of characters can be included: upper/lowercase, numeric, special...
 // 1) need a way to take in the user's inputted creteria prefferences, and apply these settings to the-
 // algorithm that will be used to populate the random password
 
-
-
-
-
-//After every prompt is answered, pw is generated that matches selected criteria --------------------------------------------------------------------------
-// 1) loop that takes in all of the previous functions or whatever type of code that handled criteria input-
-// and uses it to generate a random pw based off input
- if (generatorCommence = true) {
-  // code that runs through the creteria and populates an appropriate return response based on the data
- }
-//  based off this return, we need code that will run an algorithm to generate a password accordingly
 
 
 

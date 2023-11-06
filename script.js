@@ -1,22 +1,22 @@
 // Assignment Code
 
 // this is setting a variable based off of the item specified in the querySelector. (#generate ID'd button in the HTML)
-// var generateBtn = document.querySelector("#generate");
+var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-// function writePassword() {
+function writePassword() {
 // this portion of the code still needs a function named generatePassword 
 // with a return value that will be passed on to passwordText
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
+  var password = passwordGenerator();
+  var passwordText = document.querySelector("#password");
 
-//   passwordText.value = password;
+  passwordText.value = password;
 
-// }
+}
 
 // Add event listener to generate button
 // this code is saying "when generateBtn is clicked, execute function writePassword"
-// generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword);
 
 
 // Boolean Toggle Group that will change based off user input
@@ -220,9 +220,6 @@ function passwordGenerator () {
     number = null;
   }
 
-
-
-
     // this part should generate the numeric portion of the passwords
     for (let i = 8; i <= 128 && i >= 8; i++) { //this line will allow password to be ranging from 8 ~ 128
        let char = Math.floor(Math.random()*(lowerCase+upperCase+symbol+number).length + 1);
@@ -234,13 +231,6 @@ function passwordGenerator () {
 
 passwordGenerator(); //temporary test to see if generator is functioning
 console.log(passwordGenerator());
-
-// Toggle to confirm which types of characters can be included: upper/lowercase, numeric, special...
-// 1) need a way to take in the user's inputted creteria prefferences, and apply these settings to the-
-// algorithm that will be used to populate the random password
-
-
-
 
 
 //When this pw is written, its either displayed in the alert or written to the page--------------------------------------------------------------------------

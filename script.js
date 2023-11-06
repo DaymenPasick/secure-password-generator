@@ -1,12 +1,9 @@
-// Assignment Code
 
 // this is setting a variable based off of the item specified in the querySelector. (#generate ID'd button in the HTML)
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
+// this portion of code writes out the password using the passWordGenerator()
 function writePassword() {
-// this portion of the code still needs a function named generatePassword 
-// with a return value that will be passed on to passwordText
   var password = passwordGenerator();
   var passwordText = document.querySelector("#password");
 
@@ -193,12 +190,11 @@ if (lowerCaseBoolean || upperCaseBoolean || numericBoolean || symbolBoolean ) {
 // and pass the results onto the actual password generator
 function readCriteriaBooleans() {
   passwordGenerator();
-  alert("New Secure Password: " + passwordGenerator());
   // function that will take alter password criteria based off criteria booleans
 }
 
 
-// 1st need to be able to generate a password in general
+// function to accept all the previous user-input and use it as criteria to create a password --------------------------
 function passwordGenerator () {
   let pass = '';
   let upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -228,10 +224,3 @@ function passwordGenerator () {
     }
     return pass; //returns the generated password value back to "pass" variable
 }
-
-passwordGenerator(); //temporary test to see if generator is functioning
-console.log(passwordGenerator());
-
-
-//When this pw is written, its either displayed in the alert or written to the page--------------------------------------------------------------------------
-// use the above given code in the starter code to facilitate this :)

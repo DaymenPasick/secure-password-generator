@@ -19,12 +19,6 @@
 // generateBtn.addEventListener("click", writePassword);
 
 
-//Global variables for each criteria type
-var lowerCase = ""
-var upperCase = ""
-var numeric = 0 
-var symbols = ""
-
 // Boolean Toggle Group that will change based off user input
 // Criteria will initially all start as being true (meaning user wants to include them in their password)
 var lowerCaseBoolean = true
@@ -204,9 +198,14 @@ function readCriteriaBooleans() {
 
 
 // 1st need to be able to generate a password in general
+function passwordGenerator () {
+  let pass = '';
+  let upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  let lowerCase = upperCase.toLowerCase(); //will convert upperCase to lower-case letters
+  console.log(lowerCase);
+}
 
-
-
+passwordGenerator(); //temporary test to see if generator is functioning
 
 
 //Pw length can only be 8 ~ 128 chars --------------------------------------------------------------------------

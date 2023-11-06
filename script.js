@@ -202,11 +202,20 @@ function passwordGenerator () {
   let pass = '';
   let upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   let lowerCase = upperCase.toLowerCase(); //will convert upperCase to lower-case letters
-  console.log(lowerCase);
+  let symbol = '*&%$#@!?.'
+  let number = '123456789';
+
+    // this part should generate the numeric portion of the passwords
+    for (let i = 1; i <= 8; i++) {
+       let char = Math.floor(Math.random()*(lowerCase+upperCase+symbol+number).length + 1);
+        //The above and below code will combine our internal variables to create characters for the generator to choose
+       pass += (lowerCase+upperCase+symbol+number).charAt(char);
+    }
+    return pass; //returns the generated password value back to "pass" variable
 }
 
 passwordGenerator(); //temporary test to see if generator is functioning
-
+console.log(passwordGenerator());
 
 //Pw length can only be 8 ~ 128 chars --------------------------------------------------------------------------
 // 1) need a way to control the min/max length of characters generated when user generated the password

@@ -169,10 +169,24 @@ function symbolPrompt() {
    }
 
 //End of functionality prompting user input for symbol inclusivity -------------------------------------------------------
- 
+
 console.log("log tester");
+ 
+// Function that will check to see if at least one criteria was selected (at least one boolean is true)
+// If not, it should pass the user back to initial criteria prompt
+var generatorCommence = false
 
-
+function criteriaChecker () {
+if (lowerCaseBoolean || upperCaseBoolean || numericBoolean || symbolBoolean ) {
+  generatorCommence = true; 
+ }
+}
+// 2) a prompt message saying they must select at least one type of character before generation can start
+if (generatorCommence = false) {
+  // this console.log should be replaced with an actual prompt screen message
+  console.log("at least one criteria must be selected");
+  // need code to return user to criteria options/toggle interface
+}
 
 
 
@@ -194,25 +208,7 @@ console.log("log tester");
 //   var upperCaseToggle = false;
 // }
 
-// Minimum of one character type needs to be selected
-// 1)some type of code to prevent the ability to generate password if no-character type is set
-if (noCharSelection = true) {
-  generatorCommence = false; 
-}
 
-// 2) a prompt message saying they must select at least one type of character before generation can start
-if (generatorCommence = false) {
-  // this console.log should be replaced with an actual prompt screen message
-  console.log("at least one criteria must be selected");
-  // need code to return user to criteria options/toggle interface
-}
-
-
-// When I answer each prompt, input should be validated "please enter correct......" --------------------------------------------------------------------------
-
-// if (inputCriteria === 'y' || inputCriteria === 'Y' inputCriteria === 'n' inputCriteria === 'N') {
-//     console.log ("woop woop");
-// }
 
 
 
@@ -228,5 +224,4 @@ if (generatorCommence = false) {
 
 
 //When this pw is written, its either displayed in the alert or written to the page--------------------------------------------------------------------------
-
 // use the above given code in the starter code to facilitate this :)

@@ -201,10 +201,27 @@ function readCriteriaBooleans() {
 // 1st need to be able to generate a password in general
 function passwordGenerator () {
   let pass = '';
-  let upperCase = null
-  let lowerCase = null
-  let symbol = null
+  let upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  let lowerCase = 'abcdefhijklmnopqrstuvwxyz';
+  let symbol = '*&%$#@!?.'
   let number = '123456789';
+
+  // these if statements will "toggle" the above criterias based on the user input into the prompt
+  if (!lowerCaseBoolean) {
+    lowerCase = null;
+  }
+  if (!upperCaseBoolean) {
+    upperCase = null;
+  }
+  if (!symbol) {
+    symbol = null;
+  }
+  if (!number) {
+    number = null;
+  }
+
+
+
 
     // this part should generate the numeric portion of the passwords
     for (let i = 8; i <= 128 && i >= 8; i++) { //this line will allow password to be ranging from 8 ~ 128

@@ -168,7 +168,7 @@ function symbolPrompt() {
        symbolBoolean = false;
        console.log(symbolBoolean);
       //  this should pass code to check selected credentials/verify at least one credential has been selected
-      //  lowerCasePrompt();
+      criteriaChecker ()
    }
 
    }
@@ -184,19 +184,24 @@ var generatorCommence = false
 function criteriaChecker () {
 if (lowerCaseBoolean || upperCaseBoolean || numericBoolean || symbolBoolean ) {
   generatorCommence = true;
+  readCriteriaBooleans(); //passes to portion of code that will take in true/false criteria based off user-prompt input
 } else {
   generatorCommence = false;
   alert("Must have at least one criteria, please try again");
-
+  // this will send user back to criteria prompt if they didn't select at least one criteria
+  lowerCasePrompt()
  }
 }
 
-if (generatorCommence = false) {
-  // this console.log should be replaced with an actual prompt screen message
-  console.log("at least one criteria must be selected");
-  // need code to return user to criteria options/toggle interface
-}
 
+// This function should take in the criteria booleans that we set based off the user's response
+// and pass the results onto the actual password generator
+
+function readCriteriaBooleans() {
+  if (generatorCommence) {
+    // code to read Boolean responses
+  }
+}
 
 
 
@@ -209,13 +214,6 @@ if (generatorCommence = false) {
 // Toggle to confirm which types of characters can be included: upper/lowercase, numeric, special...
 // 1) need a way to take in the user's inputted creteria prefferences, and apply these settings to the-
 // algorithm that will be used to populate the random password
-
-
-
-// general idea of toggle formula that will effect the above toggle variable grouop
-// if (userToggle = off) {
-//   var upperCaseToggle = false;
-// }
 
 
 

@@ -162,12 +162,12 @@ function symbolPrompt() {
    if (symbolInput === 'y' || symbolInput === 'Y' ) {
        symbolBoolean = true;
        console.log(numericBoolean);
-       criteriaChecker ()
+       lengthPrompt(); //  this should pass code to length prompt function
    } else {
        symbolBoolean = false;
        console.log(symbolBoolean);
-      //  this should pass code to check selected credentials/verify at least one credential has been selected
-      criteriaChecker ()
+      //  this should pass code to length prompt function
+      lengthPrompt();
    }
 
    }
@@ -184,6 +184,7 @@ function symbolPrompt() {
 function lengthPrompt() {
     
   lengthInput = prompt("How long would you like your password? (Must be 8 ~ 128 character)")
+      lengthInput = number(lengthInput); //should convert string from prompt input into a number
  if (lengthInput = 0 || NaN || undefined) {   //Will check to make sure user entered a number 
      alert("Must enter a number between 8 and 128.");
      lengthPrompt(); // will send them back to length prompt to re-try
@@ -192,19 +193,15 @@ function lengthPrompt() {
    }
 }
 
-
-// if (lengthInput <= 128 && lengthInput >= 8 )
 //will check lengthInput to validate whether input was between 8 and 128 
-function lengthToggle () {
- if (symbolInput === 'y' || symbolInput === 'Y' ) {
-     symbolBoolean = true;
-     console.log(numericBoolean);
-     criteriaChecker ()
+function lengthChecker () {
+  if (lengthInput <= 128 && lengthInput >= 8 ) {
+     passwordLength = lengthInput;
+     console.log(passwordLength);
+    //  criteriaChecker (); // this should pass code to check selected credentials/verify at least one credential has been selected
  } else {
-     symbolBoolean = false;
-     console.log(symbolBoolean);
-    //  this should pass code to check selected credentials/verify at least one credential has been selected
-    criteriaChecker ()
+     alert("Number must be between 8 and 128.");
+     lengthPrompt(); //will pass user back to length prompt to re-try
  }
 
  }

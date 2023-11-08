@@ -1,3 +1,13 @@
+// Summerized execution of code 
+// 1)Set up connection between css and html to make a responsive button "Generate Password"
+// 2)Establish general global Household variables to be used throughout the code
+// 3) Via prompt functions, user will be given option to select desired p.w. criteria
+// 4) Via toggle functions, these prompt answers will effect the true/false value of Household Booleans
+// 5) Criteria checker function will check booleans, then pass them to p.w. generator function
+// 6) passwordGenerator function will take in this passed info & either pass or "null" p.w. function-local criteria values
+// 7) passwordGenerator will then generate a randomized p.w. 
+// 8) writePassword function will populute this p.w. in the box on the webpage
+
 
 // this is setting a variable based off of the item specified in the querySelector. (#generate ID'd button in the HTML)
 var generateBtn = document.querySelector("#generate");

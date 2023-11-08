@@ -184,18 +184,17 @@ function symbolPrompt() {
 function lengthPrompt() {
     
   lengthInput = prompt("How long would you like your password? (Must be 8 ~ 128 character)")
- if (symbolInput === 'y' || symbolInput === 'Y' || symbolInput === 'n' || symbolInput === 'N') {
-     console.log (lengthInput);
-     lengthToggle();
+ if (lengthInput = 0 || NaN || undefined) {   //Will check to make sure user entered a number 
+     alert("Must enter a number between 8 and 128.");
+     lengthPrompt(); // will send them back to length prompt to re-try
    } else {
-     // should prompt user to use correct characters and allow them to retry
-     console.log("please try again");
-     alert("Must use one of the following: 'y' - 'Y' - 'n' - 'N'. Please try again.");
-     symbolPrompt(); 
+     lengthChecker ();      
    }
 }
 
-//will set numberBoolean to true/false depending on response to symbol prompt
+
+// if (lengthInput <= 128 && lengthInput >= 8 )
+//will check lengthInput to validate whether input was between 8 and 128 
 function lengthToggle () {
  if (symbolInput === 'y' || symbolInput === 'Y' ) {
      symbolBoolean = true;

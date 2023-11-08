@@ -24,6 +24,7 @@ var lowerCaseBoolean = true
 var upperCaseBoolean = true
 var numericBoolean = true
 var symbolBoolean = true
+var passwordLength = 8
 
 //Global variable to store user-input for each criteria option
 var lowerCaseInput
@@ -180,12 +181,12 @@ function symbolPrompt() {
 
 
 
-function symbolPrompt() {
+function lengthPrompt() {
     
-  symbolInput = prompt("would you like to include symbols?")
+  lengthInput = prompt("How long would you like your password? (Must be 8 ~ 128 character)")
  if (symbolInput === 'y' || symbolInput === 'Y' || symbolInput === 'n' || symbolInput === 'N') {
-     console.log (symbolInput);
-     symbolToggle();
+     console.log (lengthInput);
+     lengthToggle();
    } else {
      // should prompt user to use correct characters and allow them to retry
      console.log("please try again");
@@ -195,7 +196,7 @@ function symbolPrompt() {
 }
 
 //will set numberBoolean to true/false depending on response to symbol prompt
-function symbolToggle () {
+function lengthToggle () {
  if (symbolInput === 'y' || symbolInput === 'Y' ) {
      symbolBoolean = true;
      console.log(numericBoolean);

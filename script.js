@@ -184,7 +184,7 @@ function symbolPrompt() {
 function lengthPrompt() {
     
   lengthInput = prompt("How long would you like your password? (Must be 8 ~ 128 character)")
-      passwordLength = parseInt(lengthInput); //should convert string from prompt input into a number and set passwordLength
+      passwordLength = parseInt(lengthInput); //should convert string from prompt input into a number and set global passwordLength
  if (passwordLength === 0 || passwordLength === NaN || passwordLength === undefined) {   //Will check to make sure user entered a number 
      alert("Must enter a number between 8 and 128.");
      console.log(passwordLength);
@@ -198,14 +198,13 @@ function lengthPrompt() {
 function lengthChecker () {
   if (passwordLength <= 128 && lengthInput >= 8 ) {
      console.log(passwordLength);
-    //  criteriaChecker (); // this should pass code to check selected credentials/verify at least one credential has been selected
+     criteriaChecker (); // this should pass code to check selected credentials/verify at least one credential has been selected
  } else {
      alert("Number must be between 8 and 128.");
      lengthPrompt(); //will pass user back to length prompt to re-try
  }
 
  }
-
 
 //End of functionality prompting user input for p.w. length --------------------------------------------------------------
 
@@ -258,7 +257,7 @@ function passwordGenerator () {
   }
 
     // this part should generate the randomized portion of the password based off user-entered prompts
-    for (let i = 8; i <= 128 && i >= 8; i++) { //this line will allow password to be ranging from 8 ~ 128
+    for (let i = 1; i <= passwordLength; i++) { //this line will allow password to range from 8 ~ 128 based on passwordLength global variable
        let char = Math.floor(Math.random()*(lowerCase+upperCase+symbol+number).length + 1);
         //The above and below code will combine our internal variables to create characters for the generator to choose
        pass += (lowerCase+upperCase+symbol+number).charAt(char);

@@ -175,6 +175,46 @@ function symbolPrompt() {
 
 
 
+
+//Start of functionality prompting user for p.w. length ------------------------------------------------------------------
+
+
+
+function symbolPrompt() {
+    
+  symbolInput = prompt("would you like to include symbols?")
+ if (symbolInput === 'y' || symbolInput === 'Y' || symbolInput === 'n' || symbolInput === 'N') {
+     console.log (symbolInput);
+     symbolToggle();
+   } else {
+     // should prompt user to use correct characters and allow them to retry
+     console.log("please try again");
+     alert("Must use one of the following: 'y' - 'Y' - 'n' - 'N'. Please try again.");
+     symbolPrompt(); 
+   }
+}
+
+//will set numberBoolean to true/false depending on response to symbol prompt
+function symbolToggle () {
+ if (symbolInput === 'y' || symbolInput === 'Y' ) {
+     symbolBoolean = true;
+     console.log(numericBoolean);
+     criteriaChecker ()
+ } else {
+     symbolBoolean = false;
+     console.log(symbolBoolean);
+    //  this should pass code to check selected credentials/verify at least one credential has been selected
+    criteriaChecker ()
+ }
+
+ }
+
+
+//End of functionality prompting user input for p.w. length --------------------------------------------------------------
+
+
+
+
 // Function that will check to see if at least one criteria was selected (at least one boolean is true)
 // If not, it should pass the user back to initial criteria prompt
 function criteriaChecker () {

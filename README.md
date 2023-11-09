@@ -4,14 +4,9 @@ a program that will allow you to generate a secure password based on user-inputt
 
 ## Description
 
-According to the goals your company wanted to achieve, we were able to add the following improvements to your website's source code:
+ We've designed an easy to use program that will generate a random, secure password!
 
-- Repaired an issue with the broken "search engine optimization" navigation link. It should be functioning as intended!
-- By replacing some generic tags with more SEO friendly semantic tags, we were able to improve your website's ability to pop out in web searches, increasing your reach to future customors!
-- Cleaner code, including newly added comments within the HTML and CSS to help future developer's work more efficiently on your website!
-- Fixed some minor issues with head elements to make sure they were in numeric order and functioning as intended
-- Added alt attributes to all of your images and icons to help meet the modern-day accessibility standards 
-- Added slight hover animations over navigational links on the webpage to help user see which link they are selecting
+- Just click the big red button, answer a few prompts regarding the details of your future password, and the generator will do the rest.
 
 ## Screenshots
 

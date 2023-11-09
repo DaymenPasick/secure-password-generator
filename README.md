@@ -12,11 +12,12 @@ a program that will allow you to generate a secure password based on user-inputt
 
 - Image of final product 
 
-![comeplted product website screenshot](assets/images/2023-Horiseon-Social-Solution-Services.png)
+![comeplted product website screenshot](./Assets/imgs/password-generator-full%20page.png)
 
-## Credits
-UNC Charlotte Code Bootcamp course README template: https://bootcampspot.instructure.com/courses/4403/pages/3-dot-5-3-create-a-professional-project-readme?module_item_id=974099 
-(requires access to bootcamp portal to be able to access)
+- Example of generated password 
+
+![comeplted product website screenshot](./Assets/imgs/password-generator-active.png) 
+
 
 ## Usage
 
@@ -30,5 +31,4 @@ N/A
 
 ## Features
 
-In depth log of choices and thought processes regarding all of the edits made to your websites code:
-https://docs.google.com/document/d/1Acf-gO6f2TcUWDvEluVkgnI2YeL_EF6g2ZkuOb-vbMA/edit?usp=sharing
+ - Ability to dictate password case-sensativity, the allowance of numbers and symbols, and the password length

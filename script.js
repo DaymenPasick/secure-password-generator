@@ -161,11 +161,11 @@ function symbolPrompt() {
    if (symbolInput === 'y' || symbolInput === 'Y' ) {
        symbolBoolean = true;
        console.log(numericBoolean);
-       lengthPrompt(); //  this should pass code to length prompt function
+       lengthPrompt(); //  this should pass user to lengthPrompt function
    } else {
        symbolBoolean = false;
        console.log(symbolBoolean);
-      //  this should pass code to length prompt function
+      //  this should pass user to lengthPrompt function
       lengthPrompt();
    }
 
@@ -200,7 +200,7 @@ function lengthChecker () {
      criteriaChecker (); // this should pass code to check selected credentials/verify at least one credential has been selected
  } else {
      alert("Number must be between 8 and 128.");
-     lengthPrompt(); //will pass user back to length prompt to re-try
+     lengthPrompt(); //will pass user back to lengthPrompt to re-try
  }
 
  }

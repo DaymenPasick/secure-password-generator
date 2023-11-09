@@ -1,25 +1,24 @@
-// Summerized execution of code 
-// 1)Set up connection between css and html to make a responsive button "Generate Password"
-// 2)Establish general global Household variables to be used throughout the code
-// 3) Via prompt functions, user will be given option to select desired p.w. criteria
-// 4) Via toggle functions, these prompt answers will effect the true/false value of Household Booleans
-// 5) Criteria checker function will check booleans, then pass them to p.w. generator function
-// 6) passwordGenerator function will take in this passed info & either pass or "null" p.w. function-local criteria values
-// 7) passwordGenerator will then generate a randomized p.w. 
+// Summerized step-by-step execution of code: 
+// 1) Set up connection between css and html to make a responsive button "Generate Password"
+// 2) Establish general global Household variables to be used throughout the code (i.e. lowerCaseBoolean)
+// 3) Via prompt functions, user will be given option to select their desired p.w. criteria
+// 4) Via toggle functions, these prompt responses will effect the true/false value of Household Booleans
+// 5) Criteria checker function will check boolean values, then pass them to p.w. generator function
+// 6) passwordGenerator function will take in these passed values & either pass or "null" function-local variable values
+// 7) passwordGenerator will then generate a randomized p.w. using these passed or nulled variable values
 // 8) writePassword function will populute this p.w. in the box on the webpage
 
 
-// this is setting a variable based off of the item specified in the querySelector. (#generate ID'd button in the HTML)
+// this is using HTML item with class "generate" to create button functionality
 var generateBtn = document.querySelector("#generate");
 
 
-// Add event listener to generate button
 // this code is saying "when generateBtn is clicked, execute function writePassword"
 generateBtn.addEventListener("click", writePassword);
 
 
-// Boolean Toggle Group that will change based off user input
-// Criteria will initially all start as being true (meaning user wants to include them in their password)
+// Boolean Toggle Group that will change based off user-prompt input
+// Values will initially be true (meaning user wants to include them in their password)
 var lowerCaseBoolean = true
 var upperCaseBoolean = true
 var numericBoolean = true
@@ -44,7 +43,7 @@ function lowerCasePrompt() {
         console.log (lowerCaseInput);
         lowerCaseToggle();
       } else {
-        // should prompt user to use correct characters and allow them to retry
+        // should prompt user to use correct characters and allow them to retry if they failed to
         console.log("please try again");
         alert("Must use one of the following: 'y' - 'Y' - 'n' - 'N'. Please try again.");
         lowerCasePrompt(); 
@@ -56,11 +55,11 @@ function lowerCasePrompt() {
     if (lowerCaseInput === 'y' || lowerCaseInput === 'Y' ) {
         lowerCaseBoolean = true;
         console.log(lowerCaseBoolean);
-        upperCasePrompt(); //Will chain into upper-case letter prompt
+        upperCasePrompt(); //Will pass user into upper-case letter prompt
     } else {
         lowerCaseBoolean = false;
         console.log(lowerCaseBoolean);
-        upperCasePrompt(); //Will chain into upper-case letter prompt
+        upperCasePrompt(); //Will pass user into upper-case letter prompt
     }
   }
 //End of functionality prompting user input for lower-case letters -------------------------------------------------------
@@ -90,11 +89,11 @@ function upperCasePrompt() {
    if (upperCaseInput === 'y' || upperCaseInput === 'Y' ) {
        upperCaseBoolean = true;
        console.log(upperCaseBoolean);
-       numericPrompt(); //will chain into numeric input prompt
+       numericPrompt(); //will pass user  into numeric input prompt
    } else {
        upperCaseBoolean = false;
        console.log(upperCaseBoolean);
-       numericPrompt(); //will chain into numeric input prompt
+       numericPrompt(); //will pass user  into numeric input prompt
    }
 
    }
@@ -126,11 +125,11 @@ function numericPrompt() {
    if (numericInput === 'y' || numericInput === 'Y' ) {
        numericBoolean = true;
        console.log(numericBoolean);
-       symbolPrompt(); //will chain into symbol input prompt
+       symbolPrompt(); //will pass user  into symbol input prompt
    } else {
        numericBoolean = false;
        console.log(numericBoolean);
-       symbolPrompt(); //will chain into symbol input prompt
+       symbolPrompt(); //will pass user  into symbol input prompt
    }
 
    }

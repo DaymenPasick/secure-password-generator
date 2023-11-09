@@ -1,5 +1,5 @@
 # secure-password-generator
-a program that will allow you to generate a secure password based on user-inputted criteria
+
 
 
 ## Description
@@ -21,8 +21,9 @@ a program that will allow you to generate a secure password based on user-inputt
 
 ## Usage
 
-Click the link to view your updated webpage: 
-https://daymenpasick.github.io/semantic-seo-refactor/
+Click the link to view password generator: 
+https://daymenpasick.github.io/secure-password-generator/
+
 
 
 ## License
@@ -31,4 +32,4 @@ N/A
 
 ## Features
 
- - Ability to dictate password case-sensativity, the allowance of numbers and symbols, and the password length
+ - User has the ability to dictate password case-sensativity, the allowance of numbers and symbols, and the password length
